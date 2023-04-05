@@ -19,10 +19,11 @@ spec:
       app: sonarqube
       deploymentconfig: sonarqube
   strategy:
-    rollingUpdate:
-      maxSurge: 25%
-      maxUnavailable: 25%
-    type: RollingUpdate
+    activeDeadlineSeconds: 21600
+    recreateParams:
+      timeoutSeconds: 600
+    resources: {}
+    type: Recreate
   template:
     metadata:
       labels:
