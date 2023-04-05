@@ -1,6 +1,8 @@
 apiVersion: apps.openshift.io/v1
 kind: DeploymentConfig
 metadata:
+  annotations:
+    last-restart: '1680729779'
   labels:
     app: sonarqube
     app.kubernetes.io/component: postgresql-sonarqube-dc
