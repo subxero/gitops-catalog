@@ -77,6 +77,8 @@ spec:
             procMount: Default
           terminationMessagePath: /dev/termination-log
           terminationMessagePolicy: File
+          image: >-
+            image-registry.openshift-image-registry.svc:5000/openshift/postgresql:12
           volumeMounts:
             - mountPath: /var/lib/pgsql/data
               name: postgresql-data
